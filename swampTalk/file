@@ -1,0 +1,25 @@
+* mult
+set foo 10
+set bar 3
+set ans 0
+moreMul: set ans ans + foo
+set bar bar-1
+gotoifp moreMul bar
+show ans
+* div/mod
+set foo 17
+set bar 3
+set ans 0
+moreDiv: set foo foo - bar
+set ans ans+1
+gotoifp moreDiv foo - bar
+show ans
+show foo
+gotoifp skip foo
+show 999
+halt
+skip: set new new+foo-10
+show new
+set new new+foo-10
+show new
+halt
